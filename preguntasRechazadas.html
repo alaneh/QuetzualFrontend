@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntar</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/preguntasRechazadas.css">
+</head>
+
+<body>
+    <header class=" header ">
+        <nav class="navegacion ">
+            <img src="./img/logotipo.png " alt="Logotipo oficial de Quetzual " class="logo ">
+            <article>Mis preguntas</article>
+            <button class="cs ">Cerrar sesión</button>
+        </nav>
+        <div class="menu ">
+            <div class="menu_content ">
+                <img src="./img/bx-home.svg" alt="Simbolo de usuario " class="svg "> Inicio
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-user-circle.svg" width="40 " alt="Simbolo de usuario " class="svg "> Mi cuenta
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-edit-alt.svg" alt="Simbolo de pregunta"> Quiero Preguntar
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Preguntas rechazadas</h1>
+        <hr>
+        <p>En este espacio puedes consultar las preguntas que han sido rechazadas por los doctores.</p>
+    </div>
+    <div class="filtro">
+        <select name="filtro" id="filtro">
+            <option selected disabled hidden>Selecciona el filtro de preguntas</option>
+            <option value="a">Hacer pregunta</option>
+            <option value="a">Preguntas Respondidas</option>
+            <option value="a">Preguntas rechazadas</option>
+            <option value="a">Preguntas pendientes</option>
+        </select>
+    </div>
+    <div class="card">
+        <div class="mini_header">
+            <h2>22/09/2021</h2>
+        </div>
+        <div class="pregunta">
+            <img src="./img/bxs-user.svg" alt="">
+            <div class="preguntas">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa atque quo minus dolorum id cupiditate odit eligendi in qui voluptates?</h3>
+            </div>
+            <h1 class="h1">Razón del rechazo</h1>
+            <div class="preguntas">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci porro iure perferendis, nemo in, aliquid laudantium sequi iste blanditiis suscipit fugit velit, non minima ducimus? Nisi asperiores repellat itaque laboriosam.</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

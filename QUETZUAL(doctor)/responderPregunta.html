@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responder</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/responderPregunta.css">
+</head>
+
+<body>
+    <header class=" header ">
+        <nav class="navegacion ">
+            <img src="./img/logotipo.png " alt="Logotipo oficial de Quetzual " class="logo ">
+            <article>Responder pregunta</article>
+            <button class="cs ">Cerrar sesión</button>
+        </nav>
+        <div class="menu ">
+            <div class="menu_content ">
+                <img src="./img/bx-home.svg" alt="Simbolo de usuario " class="svg "> Inicio
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-user-circle.svg" width="40 " alt="Simbolo de usuario " class="svg "> Mi cuenta
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-line-chart.svg" alt="Simbolo de pregunta"> Ranking
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <img src="./img/bxs-left-arrow-circle.svg">
+        <h1>Volver a gestionar preguntas</h1>
+    </div>
+    <div class="main_container">
+        <div class="mini_header2">
+            <h2>11/10/2021</h2>
+        </div>
+        <div class="pregunta2">
+            <h1>Pregunta</h1>
+        </div>
+        <div class="pregunta">
+            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae laboriosam id ducimus vitae aperiam odio accusamus? Molestiae, dignissimos voluptates?</textarea>
+        </div>
+        <select name="filtro" id="filtro">
+            <option selected disabled hidden>Elige la clasificación</option>
+            <option value="a">Enfermedades de transmisión sexual</option>
+            <option value="a">Anticonceptivos</option>
+            <option value="a">Embarazo</option>
+            <option value="a">Salud sexual femenina</option>
+            <option value="a">Salud sexual masculina</option>
+        </select>
+        <div class="pregunta2">
+            <h1>Respuesta</h1>
+        </div>
+        <div class="pregunta">
+            <textarea name="" id="" class="area" placeholder="Escribe aquí tu respuesta"></textarea>
+        </div>
+        <div class="flex">
+            <button class="question" data-open="modalR">Responder</button>
+            <button class="cs">Cancelar</button>
+        </div>
+    </div>
+    <div class="modal" id="modalR">
+        <div class="card">
+            <h1>!Felicidades¡</h1><br>
+            <h1>Has obtenido 2 puntos por responder esta pregunta</h1><br>
+            <h1>Gracias por tu esfuerzo</h1><br>
+            <img src="./img/undraw_happy_announcement_ac67.svg" class="img">
+
+            <a href="./preguntasPendientes.html"><button class="question">Aceptar</button></a>
+        </div>
+    </div>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>

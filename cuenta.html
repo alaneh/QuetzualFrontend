@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/cuenta.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <img src="./img/logotipo.png" alt="Logotipo oficial de Quetzual" class="logo">
+            <article>Cuenta</article>
+            <button class="cs">Cerrar sesión</button>
+        </nav>
+        <div class="menu">
+            <div class="menu_content">
+                <img src="./img/bx-home.svg" alt="Imagen "> Inicio
+            </div>
+            <div class="menu_content">
+                <img src="./img/bx-question-mark.svg" alt="Signo de pregunta" class="svg"> Mis preguntas
+            </div>
+        </div>
+    </header>
+
+    <div class="datos">
+        <p>Nombre</p>
+        <p>Correo electronico</p>
+        <p>Fecha de nacimiento</p>
+        <p>Sexo</p>
+    </div>
+    <div class="title">
+        <h1>Aprovechamiento del sistema</h1>
+        <hr>
+    </div>
+    <div class="explicación">
+        <p>
+            Las siguientes graficas muestran los resultados de acuerdo a las preguntas respondidas y las rechazadas, a su vez tambien se muestra la comparación de las preguntas que has calificado con respecto a la utilidad que te han dado al igual de estar clasificada
+            por categoria.
+        </p>
+    </div>
+    <div class="flex">
+        <div class="bar">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="pie">
+            <canvas id="piechart"></canvas>
+        </div>
+    </div>
+    <div class="title">
+        <h1>Modificar Cuenta</h1>
+        <hr>
+    </div>
+    <div class="flex">
+        <div class="card">
+            <form action="#">
+                <input type="text" placeholder="Nombre de Usuario" class="input">
+                <input type="text" placeholder="Correo electronico" class="input">
+                <br>
+                <label for="" class="article">Fecha de nacimiento</label><br>
+                <input type="date" name="" id="" class="input">
+                <br>
+                <label for="" class="article">Sexo</label>
+                <br>
+                <select name="" id="" class="select">
+                <option value="a">Masculino</option>
+                <option value="a">Femenino</option>
+                <option value="a">Prefiero no decirlo</option>
+            </select>
+                <input type="submit" class="submit" value="Modificar Cuenta">
+            </form>
+        </div>
+        <div class="card">
+            <form action="#">
+                <input type="password" name="" id="" placeholder="Contraseña Actual" class="input">
+                <input type="password" name="" id="" placeholder="Nueva Contraseña" class="input">
+                <input type="password" name="" id="" placeholder="Confirmar Nueva Contraseña" class="input">
+                <input type="submit" class="submit" value="Cambiar contraseña">
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modalR">
+        <div class="card">
+            <article>
+                <b>
+                    Cuidado, esta acción será permanente, una ver eliminada la cuenta, tus datos y todo el progreso no podrán recuperarse ¿Desea continuar?
+                </b>
+            </article>
+            <button class="cs">Eliminar cuenta</button> <br>
+            <button class="submit">Deseo permanecer en el sistema</button>
+        </div>
+    </div>
+    </div>
+    <button class="cs" data-open="modalR"><b>Eliminar cuenta</b></button>
+    <script type="text/javascript" src="./JS/graficas.js"></script>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>

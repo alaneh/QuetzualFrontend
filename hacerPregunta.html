@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntar</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/hacerPregunta.css">
+</head>
+
+<body>
+    <header class=" header ">
+        <nav class="navegacion ">
+            <img src="./img/logotipo.png " alt="Logotipo oficial de Quetzual " class="logo ">
+            <article>Mis preguntas</article>
+            <button class="cs ">Cerrar sesión</button>
+        </nav>
+        <div class="menu ">
+            <div class="menu_content ">
+                <img src="./img/bx-home.svg" alt="Simbolo de usuario " class="svg "> Inicio
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-user-circle.svg" width="40 " alt="Simbolo de usuario " class="svg "> Mi cuenta
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-question-mark.svg " alt="Simbolo de pregunta"> Mis preguntas
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Hacer Pregunta</h1>
+        <hr>
+        <p class="p">En este espacio puedes realizar una petición para que el doctor resuelva tu duda</p>
+    </div>
+    <div class="filtro">
+        <select name="filtro" id="filtro">
+            <option selected disabled hidden>Selecciona el filtro de preguntas</option>
+            <option value="a">Hacer pregunta</option>
+            <option value="a">Preguntas Respondidas</option>
+            <option value="a">Preguntas rechazadas</option>
+            <option value="a">Preguntas pendientes</option>
+        </select>
+    </div>
+    <div class="main_container">
+        <div class="mini_header2">
+            <h2>11/10/2021</h2>
+        </div>
+        <div class="pregunta">
+            <img src="./img/bxs-user.svg" alt="">
+            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta" disabled></textarea>
+        </div>
+        <div class="flex">
+            <button class="question" data-open="modalR">Preguntar</button>
+            <button class="cs">Cancelar</button>
+        </div>
+    </div>
+    <div class="modal" id="modalR">
+        <div class="main_content">
+            <p>Estas preguntas son smilares a la tuya y ya han sido respondidas. Tal vez te sea ùtil</p>
+            <div class="card">
+                <div class="mini_header">
+                    <h2>Edad</h2>
+                    <h2>Categoria</h2>
+                    <h2>4.7
+                        <p class="star">★</p>
+                    </h2>
+                    <h2>150 Reseñas</h2>
+                </div>
+                <div class="sub_header">
+                    <h2>22/09/2021 - Respondido: 23/09/2021</h2>
+                    <h2>Dr. Juan Manuel Mendoza</h2>
+                </div>
+                <div class="pregunta">
+                    <img src="./img/bxs-user.svg" alt="">
+                    <div class="preguntas">
+                        <h3>Tuve relaciones con mi pareja, y deacuerdo a mis sintomas creo que tengo S.I.D.A. pero temo ir al medico. Podría por favor ayudarme a saber si podría padecer S.I.D.A. y cual sería un posible tratamiento por favor? Estos son mis
+                            sintomas: 1.- Dolor al tragar 2.- Diarrea 3.- Llagas en la ingle</h3>
+                    </div>
+                </div>
+                <button class="question">Consultar respuesta</button>
+            </div>
+            <p>¿Aún deseas hacer esta pregunta?</p><br>
+            <a href="./confirmacionUsuario.html"><button class="question">Continuar</button></a>
+        </div>
+    </div>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>

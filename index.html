@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+</head>
+
+<body>
+    <div class="alinear">
+        <div class="grid">
+            <div class="main-content">
+                <div class="img">
+                    <img src="./img/logotipo.png" alt="Logotipo oficial de quetzual">
+                </div>
+                <article class="main-text">
+                    Quetzual es una pagina dirigida para los estudiantes del CECyT #9 con el fin de brindar una mejor guía a los estudiantes en su educación sobre salud sexual mediante la resolución de dudas sobre el tema.
+                </article>
+            </div>
+            <div class="form">
+                <form action="">
+                    <input type="text" class="texto" placeholder="Correo">
+                    <input type="password" class="texto" placeholder="Contraseña">
+                    <input type="submit" class="submit button" value="Iniciar sesión">
+                </form>
+                <hr width="90%">
+                <button class="Registro" id="registrar" data-open="modalR">
+                    <a href="#">Crear cuenta</a>
+                </button>
+            </div>
+        </div>
+        <div class="modal" id="modalR">
+            <div class="card">
+                <form action="./index.html">
+                    <input type="text" placeholder="Nombre de Usuario" class="input">
+                    <input type="text" placeholder="Correo electronico" class="input">
+                    <br>
+                    <label for="" class="article">Fecha de nacimiento</label><br>
+                    <input type="date" name="" id="" class="input">
+                    <br>
+                    <label for="" class="article">Sexo</label>
+                    <br>
+                    <select name="" id="" class="select">
+                    <option value="a">Masculino</option>
+                    <option value="a">Femenino</option>
+                    <option value="a">Prefiero no decirlo</option>
+                </select>
+                    <input type="password" name="" id="" placeholder="Contraseña" class="input">
+                    <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
+                    <article class="article">Al hacer clic en “Registrarte”, aceptas nuestras
+                        <a href="#" class="a">condiciones</a>, la <a href="#" class="a">politica de datos</a> y la <a href="#" class="a">politica de cookies</a></article>
+                    <input type="submit" class="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Tecnologia administrativa creativa y operadora de software
+    </footer>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>

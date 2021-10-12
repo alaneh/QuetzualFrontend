@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/sesionUsuario.css">
+    <link rel="stylesheet" href="./CSS/star-rating-svg.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="./JS/jquery.star-rating-svg.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navegacion">
+            <img src="./img/logotipo.png" alt="Logotipo oficial de Quetzual" class="logo">
+            <article>Inicio</article>
+            <button class="cs">Cerrar sesión</button>
+        </nav>
+        <div class="menu">
+            <div class="menu_content">
+                <img src="./img/bxs-bar-chart-alt-2.svg" alt="Imagen "> Inducción
+            </div>
+            <div class="menu_content">
+                <img src="./img/bx-user-circle.svg" width="40" alt="Signo de pregunta" class="svg"> Mi cuenta
+            </div>
+            <div class="menu_content">
+                <img src="./img/bx-question-mark.svg" alt="Imagen "> Mis preguntas
+            </div>
+            <div class="menu_content">
+                <img src="./img/bx-edit-alt.svg" alt="Signo de editar" class="svg"> Quiero preguntar
+            </div>
+        </div>
+    </header>
+
+    <div class="title">
+        <h1>Bienvenido usuario</h1>
+        <hr>
+        <p>En este espacio puedes consultar las preguntas que otros usuarios ya han realizado previamente.
+        </p>
+        <p>¡Tal vez tu duda ya ha sido contestada!</p>
+        <p>Puedes explorar este espacio usando el combobox para buscar preguntas que se relacionan directamente con tu duda.</p>
+    </div>
+    <div class="filtro">
+        <select name="filtro" id="filtro">
+            <option selected disabled hidden>Selecciona el tema de tu interes</option>
+            <option value="a">Enfermedades de transmisión sexual</option>
+            <option value="a">Anticonceptivos</option>
+            <option value="a">Embarazo</option>
+            <option value="a">Salud sexual femenina</option>
+            <option value="a">Salud sexual masculina</option>
+        </select>
+    </div>
+    <div class="main_container">
+        <div class="mini_header">
+            <h2>Edad</h2>
+            <h2>Categoria</h2>
+            <h2>4.7
+                <p class="star">★</p>
+            </h2>
+            <h2>150 Reseñas</h2>
+        </div>
+        <div class="sub_header">
+            <h2>22/09/2021 - Respondido: 23/09/2021</h2>
+            <h2>Dr. Juan Manuel Mendoza</h2>
+        </div>
+        <div class="pregunta">
+            <img src="./img/bxs-user.svg" alt="">
+            <div class="preguntas">
+                <h3>Tuve relaciones con mi pareja, y deacuerdo a mis sintomas creo que tengo S.I.D.A. pero temo ir al medico. Podría por favor ayudarme a saber si podría padecer S.I.D.A. y cual sería un posible tratamiento por favor? Estos son mis sintomas:
+                    1.- Dolor al tragar 2.- Diarrea 3.- Llagas en la ingle</h3>
+            </div>
+        </div>
+        <div class="respuesta">
+            <div class="respuestas">
+                <h3>Tus síntomas en general indican que podrías padecer S.I.D.A. Sin embargo, ningún médico puede darte un diagnóstico sin realizar estudio de laboratorio. El tratamiento consiste en antivirales para el VIH. Es necesario que acudas a un médico
+                    lo más pronto posible. No debes temer de ir al doctor, es mejor ir a tiempo y no cuando sea demasiado tarde. Puedes pedir a una persona de confiansa que te acompañe para sentirte más tr</h3>
+            </div>
+            <img src="./img/bx-plus-medical.svg" alt="">
+        </div>
+        <div class="calificacion">
+            <div class="contenedor">
+                <div class="p">¿Te ha resultado útil esta solución?</div>
+                <div class="Estrellas" id="Estrellas"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main_container">
+        <div class="mini_header">
+            <h2>Edad</h2>
+            <h2>Categoria</h2>
+            <h2>4.7
+                <p class="star">★</p>
+            </h2>
+            <h2>150 Reseñas</h2>
+        </div>
+        <div class="sub_header">
+            <h2>22/09/2021 - Respondido: 23/09/2021</h2>
+            <h2>Dr. Juan Manuel Mendoza</h2>
+        </div>
+        <div class="pregunta">
+            <img src="./img/bxs-user.svg" alt="">
+            <div class="preguntas">
+                <h3>Tuve relaciones con mi pareja, y deacuerdo a mis sintomas creo que tengo S.I.D.A. pero temo ir al medico. Podría por favor ayudarme a saber si podría padecer S.I.D.A. y cual sería un posible tratamiento por favor? Estos son mis sintomas:
+                    1.- Dolor al tragar 2.- Diarrea 3.- Llagas en la ingle</h3>
+            </div>
+        </div>
+        <div class="respuesta">
+            <div class="respuestas">
+                <h3>Tus síntomas en general indican que podrías padecer S.I.D.A. Sin embargo, ningún médico puede darte un diagnóstico sin realizar estudio de laboratorio. El tratamiento consiste en antivirales para el VIH. Es necesario que acudas a un médico
+                    lo más pronto posible. No debes temer de ir al doctor, es mejor ir a tiempo y no cuando sea demasiado tarde. Puedes pedir a una persona de confiansa que te acompañe para sentirte más tr</h3>
+            </div>
+            <img src="./img/bx-plus-medical.svg" alt="">
+        </div>
+        <div class="calificacion">
+            <div class="contenedor">
+                <div class="p">¿Te ha resultado útil esta solución?</div>
+                <div class="Estrellas" id="Estrellas"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalR">
+        <div class="card">
+            <article>
+                <b>Tu Calificación ha sido registrada</b>
+            </article>
+            <img src="./img/check-square-solid-240.png" alt="">
+        </div>
+    </div>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+* {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #FFF9ED;
+    background-image: url("../img/gatoError.jpg");
+    background-size: cover;
+}
+
+h1 {
+    margin: 50px auto;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.alinear {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4e4e4e9f;
+}
+
+.miau {
+    background-image: url("../img/gatoError2.jpg");
+}

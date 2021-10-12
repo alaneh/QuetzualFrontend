@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntar</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/modificarPregunta.css">
+</head>
+
+<body>
+    <header class=" header ">
+        <nav class="navegacion ">
+            <img src="./img/logotipo.png " alt="Logotipo oficial de Quetzual " class="logo ">
+            <article>Mis preguntas</article>
+            <button class="cs ">Cerrar sesión</button>
+        </nav>
+        <div class="menu ">
+            <div class="menu_content ">
+                <img src="./img/bx-home.svg" alt="Simbolo de usuario " class="svg "> Inicio
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-user-circle.svg" width="40 " alt="Simbolo de usuario " class="svg "> Mi cuenta
+            </div>
+            <div class="menu_content ">
+                <img src="./img/bx-edit-alt.svg" alt="Simbolo de pregunta"> Quiero Preguntar
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Modificar Pregunta</h1>
+        <hr>
+        <p>En este espacio puedes modificar tu pregunta en caso de que te hayas equivocado y quieras cambiarla.</p>
+    </div>
+    <div class="main_container">
+        <div class="mini_header">
+            <h2>Edad</h2>
+            <h2>Pendiente</h2>
+        </div>
+        <div class="sub_header">
+            <h2>22/09/2021 - Respondido: Por definir</h2>
+            <h2>Esperando Doctor</h2>
+        </div>
+        <div class="pregunta">
+            <img src="./img/bxs-user.svg" alt="">
+            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium modi, minima deserunt sit sequi aspernatur.
+            </textarea>
+        </div>
+        <div class="flex">
+            <button class="cs" data-open="modalR">Eliminar pregunta</button>
+            <button class="question" data-open="modalG">Guardar cambios</button>
+        </div>
+    </div>
+    <div class="modal" id="modalR">
+        <div class="card">
+            <article>
+                <b>
+                    Cuidado, esta acción será permanente, una vez eliminada la pregunta todos los datos no podrán recuperarse.¿Desea continuar?
+                </b>
+            </article>
+            <button class="cs">Eliminar pregunta</button> <br>
+            <button class="question">No, quiero volver</button>
+        </div>
+    </div>
+    <div class="modal" id="modalG">
+        <div class="card">
+            <article>
+                <b>Su pregunta ha sido modificada con exito</b>
+            </article>
+            <img src="./img/check-square-solid-240.png" alt="">
+        </div>
+    </div>
+    <script src="./JS/funcionModal.js"></script>
+</body>
+
+</html>
