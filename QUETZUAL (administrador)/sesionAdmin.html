@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/sesionAdmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+
+<body>
+    <aside>
+        <img src="./img/logotipo.png">
+        <button>Administrar doctores</button>
+        <button>Cuenta</button>
+        <button>Ranking</button>
+        <button class="cs">Cerrar sesión</button>
+    </aside>
+    <h1>Bienvenido Administrador</h1>
+    <div>Estos son los datos más recientes desde la última vez</div>
+    <div class="bar">
+        <canvas id="admChart"></canvas>
+    </div>
+    <script type="text/javascript" src="./JS/graficas.js"></script>
+</body>
+
+</html>
