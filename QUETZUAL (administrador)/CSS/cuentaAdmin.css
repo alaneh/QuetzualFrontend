@@ -135,3 +135,31 @@ button {
     border-radius: 5px;
     margin: 10px;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    background-color: #bebabac9;
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+}
+
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}

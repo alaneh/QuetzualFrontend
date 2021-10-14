@@ -11,16 +11,10 @@
 </head>
 
 <body>
-    <aside>
-        <img src="./img/logotipo.png">
-        <button>Administrar doctores</button>
-        <button>Cuenta</button>
-        <button>Ranking</button>
-        <button class="cs">Cerrar sesión</button>
-    </aside>
+    <button class="menu" data-open="modalR"><img src="./img/bx-menu (2).svg"></button>
     <h1>Administrar Doctores</h1>
-    <div class="card">
-        <button class="ac">Agregar Cuenta</button>
+    <div class="card2">
+        <button class="ac" data-open="modal2">Agregar Cuenta</button>
         <div class="alinear">
             <div class="flex">
                 <div class="m">
@@ -40,60 +34,73 @@
                 <div></div>
             </div>
             <div class="btn">
-                <button class="cs">Inhabilitar cuenta</button>
-                <button class="mc">Modificar cuenta</button>
-                <button class="ch">Consultar historico</button>
-            </div>
-        </div>
-        <div class="alinear">
-            <div class="flex">
-                <div class="m">
-                    <img src="./img/bx-plus-medical.svg">
-                </div>
-                <div></div>
-                <div class="text">
-                    <h2>Nombre Doctor</h2>
-                    <hr>
-                    <h3>Correo electronico</h3>
-                    <h3>Fecha de nacimiento</h3>
-                    <h3>Sexo</h3>
-                </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="btn">
-                <button class="cs">Inhabilitar cuenta</button>
-                <button class="mc">Modificar cuenta</button>
-                <button class="ch">Consultar historico</button>
-            </div>
-        </div>
-        <div class="alinear">
-            <div class="flex">
-                <div class="m">
-                    <img src="./img/bx-plus-medical.svg">
-                </div>
-                <div></div>
-                <div class="text">
-                    <h2>Nombre Doctor</h2>
-                    <hr>
-                    <h3>Correo electronico</h3>
-                    <h3>Fecha de nacimiento</h3>
-                    <h3>Sexo</h3>
-                </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="btn">
-                <button class="cs">Inhabilitar cuenta</button>
-                <button class="mc">Modificar cuenta</button>
+                <button class="cs" data-open="modal3">Inhabilitar cuenta</button>
+                <button class="mc" data-open="modal4">Modificar cuenta</button>
                 <button class="ch">Consultar historico</button>
             </div>
         </div>
     </div>
+    <div class="modal" id="modalR">
+        <aside class="modal-dialog">
+            <img src="./img/logotipo.png">
+            <button>Administrar doctores</button>
+            <button>Cuenta</button>
+            <button>Ranking</button>
+            <button class="cs">Cerrar sesión</button>
+        </aside>
+    </div>
+    <div class="modal2" id="modal2">
+        <div class="card">
+            <form action="./index.html">
+                <input type="text" placeholder="Nombre de Usuario" class="input">
+                <input type="email" placeholder="Correo electronico" class="input">
+                <br>
+                <label for="" class="article">Fecha de nacimiento</label><br>
+                <input type="date" name="" id="" class="input">
+                <br>
+                <label for="" class="article">Sexo</label>
+                <br>
+                <select name="" id="" class="select">
+                <option value="a">Masculino</option>
+                <option value="a">Femenino</option>
+                <option value="a">Prefiero no decirlo</option>
+            </select>
+                <input type="password" name="" id="" placeholder="Contraseña" class="input">
+                <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
+                <input type="submit" class="submit" value="Registrar Doctor">
+            </form>
+        </div>
+    </div>
+    <div class="modal2" id="modal3">
+        <div class="card">
+            <h4>Cuidado, esta acción podría afectar el flujo del sistema</h4>
+            <button class="cs">Inhabilitar cuenta</button>
+            <button class="submit">No inhabilitar cuenta</button>
+        </div>
+    </div>
+    <div class="modal2" id="modal4">
+        <div class="card">
+            <form action="./index.html">
+                <input type="text" placeholder="Nombre de Usuario" class="input" value="López Castillo Azurim Sua">
+                <input type="email" placeholder="Correo electronico" class="input" value="correodeprueba@gmail.com">
+                <br>
+                <label for="" class="article">Fecha de nacimiento</label><br>
+                <input type="date" name="" id="" class="input" value="2004-01-09">
+                <br>
+                <label for="" class="article">Sexo</label>
+                <br>
+                <select name="" id="" class="select">
+                    <option value="a">Masculino</option>
+                    <option value="a" selected>Femenino</option>
+                    <option value="a">Prefiero no decirlo</option>
+                </select>
+                <input type="password" name="" id="" placeholder="Contraseña" class="input">
+                <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
+                <input type="submit" class="submit" value="Modificar doctor">
+            </form>
+        </div>
+    </div>
+    <script src="./JS/funcionModal2.js"></script>
 </body>
 
 </html>

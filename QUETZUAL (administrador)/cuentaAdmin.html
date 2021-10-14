@@ -35,7 +35,7 @@
                 <option value="a">Femenino</option>
                 <option value="a">Prefiero no decirlo</option>
             </select>
-                <input type="submit" class="submit" value="Modificar Cuenta">
+                <input type="submit" class="submit" value="Modificar Cuenta" data-open="modalR">
             </form>
         </div>
         <div class="card">
@@ -43,10 +43,19 @@
                 <input type="password" name="" id="" placeholder="Contraseña Actual" class="input">
                 <input type="password" name="" id="" placeholder="Nueva Contraseña" class="input">
                 <input type="password" name="" id="" placeholder="Confirmar Nueva Contraseña" class="input">
-                <input type="submit" class="submit" value="Cambiar contraseña">
+                <input type="submit" class="submit" value="Cambiar contraseña" data-open="modalR">
             </form>
         </div>
     </div>
+    <div class="modal" id="modalR">
+        <div class="card">
+            <article>
+                <h2>La Cuenta ha sido modificada con exito</h2>
+            </article>
+            <img src="./img/check-square-solid-240.png" alt="">
+        </div>
+    </div>
+    <script src="./JS/funcionModal.js"></script>
 </body>
 
 </html>

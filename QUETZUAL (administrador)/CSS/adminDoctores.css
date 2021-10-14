@@ -112,7 +112,7 @@ hr {
     min-width: 300px;
 }
 
-.card {
+.card2 {
     display: inline-block;
     padding: 20px;
     width: 65%;
@@ -128,7 +128,8 @@ hr {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 15px 0;
+    margin: 15px auto;
+    height: auto;
 }
 
 .ch {
@@ -178,6 +179,9 @@ hr {
     .card {
         width: 95%;
     }
+    .card2 {
+        width: 95%;
+    }
     .flex {
         margin: 0 15px;
     }
@@ -217,6 +221,33 @@ hr {
     opacity: 1;
 }
 
+.modal2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    background-color: #bebabac9;
+}
+
+.modal2 {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+}
+
+.modal2.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 h1 {
     margin-top: 50px;
 }
@@ -237,4 +268,55 @@ h1 {
         justify-content: center;
         align-items: center;
     }
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px #0000008a;
+    padding: 1%;
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+    align-self: center;
+}
+
+.input {
+    background-color: white;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 1px solid #BCBCBC;
+}
+
+.article {
+    background-color: white;
+    font-size: 16px;
+}
+
+.select {
+    width: 40%;
+    min-width: 250px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+}
+
+.a {
+    color: #0066FF;
+    text-decoration: none;
+}
+
+.a:visited {
+    color: #0066FF;
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 2rem;
 }
