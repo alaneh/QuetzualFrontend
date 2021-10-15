@@ -59,18 +59,6 @@ header {
     margin-bottom: 10px;
 }
 
-.menu_content {
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 2rem;
-    border-bottom: 5px solid #ffffff00;
-    transition: all .15s linear;
-}
-
-.menu_content:hover {
-    border-bottom: 5px solid #1C6EA4;
-}
-
 article {
     font-size: 50px;
 }
@@ -187,4 +175,19 @@ h2 {
 select {
     padding: 10px 2px;
     font-size: 16px;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 2rem;
+    border-bottom: 5px solid #ffffff00;
+    transition: all .15s linear;
+}
+
+a:hover {
+    border-bottom: 5px solid #1C6EA4;
 }

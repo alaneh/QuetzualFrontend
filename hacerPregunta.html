@@ -17,16 +17,16 @@
             <article>Mis preguntas</article>
             <button class="cs ">Cerrar sesión</button>
         </nav>
-        <div class="menu ">
-            <div class="menu_content ">
-                <img src="./img/bx-home.svg" alt="Simbolo de usuario " class="svg "> Inicio
-            </div>
-            <div class="menu_content ">
-                <img src="./img/bx-user-circle.svg" width="40 " alt="Simbolo de usuario " class="svg "> Mi cuenta
-            </div>
-            <div class="menu_content ">
+        <div class="menu">
+            <a href="./sesionUsuario.html">
+                <img src="./img/bx-home.svg" alt="Imagen inicio"> Inicio
+            </a>
+            <a href="./cuenta.html">
+                <img src="./img/bx-user-circle.svg" width="40" alt="Signo de pregunta" class="svg"> Mi cuenta
+            </a>
+            <a href="./preguntasPendientes.html">
                 <img src="./img/bx-question-mark.svg " alt="Simbolo de pregunta"> Mis preguntas
-            </div>
+            </a>
         </div>
     </header>
     <div class="title">
@@ -35,12 +35,12 @@
         <p class="p">En este espacio puedes realizar una petición para que el doctor resuelva tu duda</p>
     </div>
     <div class="filtro">
-        <select name="filtro" id="filtro">
+        <select name="filtro" id="filtro" onchange="javascript:location.href = this.value;">
             <option selected disabled hidden>Selecciona el filtro de preguntas</option>
-            <option value="a">Hacer pregunta</option>
-            <option value="a">Preguntas Respondidas</option>
-            <option value="a">Preguntas rechazadas</option>
-            <option value="a">Preguntas pendientes</option>
+            <option value="./hacerPregunta.html">Hacer pregunta</option>
+            <option value="./preguntasRespondidas.html">Preguntas Respondidas</option>
+            <option value="./preguntasRechazadas.html">Preguntas rechazadas</option>
+            <option value="./preguntasPendientes.html">Preguntas pendientes</option>
         </select>
     </div>
     <div class="main_container">
@@ -58,7 +58,7 @@
     </div>
     <div class="modal" id="modalR">
         <div class="main_content">
-            <p>Estas preguntas son smilares a la tuya y ya han sido respondidas. Tal vez te sea ùtil</p>
+            <p>Estas preguntas son similares a la tuya y ya han sido respondidas. Tal vez te sea ùtil</p>
             <div class="card">
                 <div class="mini_header">
                     <h2>Edad</h2>
@@ -82,9 +82,10 @@
                 <button class="question">Consultar respuesta</button>
             </div>
             <p>¿Aún deseas hacer esta pregunta?</p><br>
-            <a href="./confirmacionUsuario.html"><button class="question">Continuar</button></a>
+            <button class="question" onclick="enviarConfirmacion()">Continuar</button>
         </div>
     </div>
+    <script src="./JS/sweetAlert.js"></script>
     <script src="./JS/funcionModal.js"></script>
 </body>
 

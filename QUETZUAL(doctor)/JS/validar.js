@@ -6,11 +6,7 @@ let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
 function validarcorreo(correo) {
     var validar = expresioncorreo.test(correo);
     if (!validar) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ingrese un correo valido'
-        });
+        alert("ingresen un correo valido")
     }
     return validar
 }

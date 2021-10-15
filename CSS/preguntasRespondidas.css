@@ -59,18 +59,6 @@ header {
     margin-bottom: 10px;
 }
 
-.menu_content {
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 2rem;
-    border-bottom: 5px solid #ffffff00;
-    transition: all .15s linear;
-}
-
-.menu_content:hover {
-    border-bottom: 5px solid #1C6EA4;
-}
-
 article {
     font-size: 50px;
 }
@@ -272,4 +260,19 @@ h3 {
         margin: 0 auto;
         border-radius: 5px 5px 0 0;
     }
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 2rem;
+    border-bottom: 5px solid #ffffff00;
+    transition: all .15s linear;
+}
+
+a:hover {
+    border-bottom: 5px solid #1C6EA4;
 }

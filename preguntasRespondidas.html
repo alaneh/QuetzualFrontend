@@ -21,15 +21,15 @@
             <button class="cs">Cerrar sesión</button>
         </nav>
         <div class="menu">
-            <div class="menu_content">
+            <a href="./sesionUsuario.html">
                 <img src="./img/bx-home.svg" alt="Imagen inicio"> Inicio
-            </div>
-            <div class="menu_content">
-                <img src="./img/bx-user-circle.svg" width="40" alt="Simbolo de usuario" class="svg"> Mi cuenta
-            </div>
-            <div class="menu_content">
+            </a>
+            <a href="./cuenta.html">
+                <img src="./img/bx-user-circle.svg" width="40" alt="Signo de pregunta" class="svg"> Mi cuenta
+            </a>
+            <a href="./hacerPregunta.html">
                 <img src="./img/bx-edit-alt.svg" alt="Signo de editar" class="svg"> Quiero preguntar
-            </div>
+            </a>
         </div>
     </header>
 
@@ -38,12 +38,12 @@
         <hr>
     </div>
     <div class="filtro">
-        <select name="filtro" id="filtro">
+        <select name="filtro" id="filtro" onchange="javascript:location.href = this.value;">
             <option selected disabled hidden>Selecciona el filtro de preguntas</option>
-            <option value="a">Hacer pregunta</option>
-            <option value="a">Preguntas Respondidas</option>
-            <option value="a">Preguntas rechazadas</option>
-            <option value="a">Preguntas pendientes</option>
+            <option value="./hacerPregunta.html">Hacer pregunta</option>
+            <option value="./preguntasRespondidas.html">Preguntas Respondidas</option>
+            <option value="./preguntasRechazadas.html">Preguntas rechazadas</option>
+            <option value="./preguntasPendientes.html">Preguntas pendientes</option>
         </select>
     </div>
     <div class="main_container">

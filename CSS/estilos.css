@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
 * {
-    background: #FFF9ED;
     font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #FFF9ED;
 }
 
 
@@ -44,6 +47,7 @@ img {
 
 .main-text {
     color: #5E2129;
+    background: #FFF9ED;
 }
 
 .form {
@@ -76,7 +80,7 @@ form {
     border: 3px solid rgb(170, 170, 170);
 }
 
-button,
+.Registro,
 .submit {
     background-color: #AAFACE;
     width: 60%;
@@ -91,7 +95,8 @@ button,
     margin-bottom: 20px;
 }
 
-button {
+.Registro,
+.submit {
     margin-top: 20px;
     cursor: pointer;
 }
