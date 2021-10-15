@@ -36,17 +36,17 @@
             <div class="btn">
                 <button class="cs" data-open="modal3">Inhabilitar cuenta</button>
                 <button class="mc" data-open="modal4">Modificar cuenta</button>
-                <button class="ch">Consultar historico</button>
+                <button class="ch" onclick="enviarConsultarHistorico()">Consultar historico</button>
             </div>
         </div>
     </div>
     <div class="modal" id="modalR">
         <aside class="modal-dialog">
             <img src="./img/logotipo.png">
-            <button>Administrar doctores</button>
-            <button>Cuenta</button>
-            <button>Ranking</button>
-            <button class="cs">Cerrar sesión</button>
+            <button onclick="enviarSesionAdmin()">Inicio</button>
+            <button onclick="enviarCuentaAdmin()">Cuenta</button>
+            <button onclick="enviarRankingAdmin()">Ranking</button>
+            <button class="cs" onclick="cerrarSesion()">Cerrar sesión</button>
         </aside>
     </div>
     <div class="modal2" id="modal2">
@@ -100,6 +100,7 @@
             </form>
         </div>
     </div>
+    <script src="./JS/redirigir.js"></script>
     <script src="./JS/funcionModal2.js"></script>
 </body>
 

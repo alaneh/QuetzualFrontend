@@ -13,10 +13,10 @@
 <body>
     <aside>
         <img src="./img/logotipo.png">
-        <button>Administrar doctores</button>
-        <button>Cuenta</button>
-        <button>Ranking</button>
-        <button class="cs">Cerrar sesión</button>
+        <button onclick="enviarSesionAdmin()">Inicio</button>
+        <button onclick="enviarAdminDoctores()">Administrar doctores</button>
+        <button onclick="enviarRankingAdmin()">Ranking</button>
+        <button class="cs" onclick="cerrarSesion()">Cerrar sesión</button>
     </aside>
     <h1>Modificar Cuenta</h1>
     <div class="flex">
@@ -55,6 +55,7 @@
             <img src="./img/check-square-solid-240.png" alt="">
         </div>
     </div>
+    <script src="./JS/redirigir.js"></script>
     <script src="./JS/funcionModal.js"></script>
 </body>
 
