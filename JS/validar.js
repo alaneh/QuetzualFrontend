@@ -12,13 +12,17 @@ function validarcorreo(correo) {
             text: 'Ingrese un correo valido'
         });
     }
-    return validar
+    return validar;
 }
 
 function validarcontrasena(contrasena) {
     var validar = expresioncontra.test(contrasena);
     if (!validar) {
-        alert("ingresen una contraseña valida La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula. ")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese un correo validoingresen una contraseña valida La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+        });
     }
     return validar;
 }

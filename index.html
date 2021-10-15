@@ -24,9 +24,9 @@
             </div>
             <div class="form">
                 <form action="">
-                    <input type="text" class="texto" placeholder="Correo">
-                    <input type="password" class="texto" placeholder="Contraseña">
-                    <button type="button" class="submit button" onclick="distribucion()">Iniciar sesión</button>
+                    <input type="text" id="IScorreo" class="texto" placeholder="Correo">
+                    <input type="password" id="IScontra" class="texto" placeholder="Contraseña">
+                    <button type="button" id="IniciarSesion" class="submit button" onclick="validarIS()">Iniciar sesión</button>
                 </form>
                 <hr width="90%">
                 <button class="Registro" id="registrar" data-open="modalR">
@@ -51,7 +51,7 @@
                     <option value="a">Prefiero no decirlo</option>
                 </select>
                     <input type="password" name="" id="" placeholder="Contraseña" class="input">
-                    <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
+                    <input type="password" name="" id="contrasena" placeholder="Confirmar Contraseña" class="input">
                     <article class="article">Al hacer clic en “Registrarte”, aceptas nuestras
                         <a href="#" class="a">condiciones</a>, la <a href="#" class="a">politica de datos</a> y la <a href="#" class="a">politica de cookies</a></article>
                     <button type="button" class="submit" onclick="aceptar()" id="enviar">Registrarse </button>
@@ -63,8 +63,8 @@
         Tecnologia administrativa creativa y operadora de software
     </footer>
     <script src="./JS/validar.js"></script>
-    <script src="./JS/sweetAlert.js "></script>
-    <script src="./JS/funcionModal.js "></script>
+    <script src="./JS/sweetAlert.js"></script>
+    <script src="./JS/funcionModal.js"></script>
 </body>
 
 </html>
