@@ -39,7 +39,11 @@ function distribucion() {
 function enviarConfirmacion() {
     location.href = './confirmacionUsuario.html';
 }
-
+//cerrarSesion()
 function enviarModificarPregunta() {
     location.href = './modificarPregunta.html';
+}
+
+function cerrarSesion() {
+    location.href = './index.html';
 }

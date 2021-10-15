@@ -30,10 +30,18 @@ function validarcontrasena(contrasena) {
 function validarnombre(nombre) {
     var validar = expresiononlytext.test(nombre);
     if (!validar) {
-        alert("ingresen un nombre valido valida (solo letras)")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese un nombre valido (solo letras)'
+        });
         return false;
     } else if (nombre.length > 20 || nombre.length == 0) {
-        alert("El tamaño del nombre no es correcto")
+        Swal.fire({
+            icon: 'error',
+            title: 'El tamaño del nombre no es correcto',
+            text: 'El nombre tiene que medir entre 1 y 20 caracteres'
+        });
         return false;
     } else {
         return true;
@@ -43,7 +51,11 @@ function validarnombre(nombre) {
 function validarfecha(fecha) {
     var validar = expresionfecha.test(fecha);
     if (!validar) {
-        alert("ingresen una fecha valida")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese una fecha valida'
+        });
     }
     return validar;
 }
@@ -51,10 +63,18 @@ function validarfecha(fecha) {
 function validarPregunta(pregunta) {
     var validar = expresiontextnumber.test(pregunta);
     if (!validar) {
-        alert("solo puedes ingresar letras y numeros en el campo");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Solo puedes ingresar letras y numeros en el campo'
+        });
         return false;
     } else if (pregunta.length > 100 || pregunta.length == 0) {
-        alert("solo puedes ingresar como maximos 100 caracteres");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Solo puedes ingresar como maximo 100 caracteres'
+        });
         return false;
     } else {
         return true;
@@ -68,9 +88,17 @@ function registrarr() {
     var pass = document.registrar.pass.value;
     var confpas = document.registrar.confpass.value;
     if (pass != confpas) {
-        alert("Las contraseñas no coinciden");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Las contraseñas no coinciden'
+        });
     } else if (validarfecha(fecha) && validarnombre(nombre) && validarcorreo(email) && validarcontrasena(pass)) {
-        alert("has registrado una cuenta")
+        Swal.fire({
+            icon: 'success',
+            title: 'Felicidades',
+            text: 'Has registrado una cuenta'
+        });
         document.registrar.submit;
     }
 }
@@ -79,7 +107,11 @@ function iniciars() {
     var email = document.iniciar.email.value;
     var pass = document.iniciar.pass.value;
     if (validarcorreo(email) && validarcontrasena(pass)) {
-        alert("Se ha iniciado Sesión")
+        Swal.fire({
+            icon: 'success',
+            title: 'Bien hecho',
+            text: 'Se ha iniciado Sesión'
+        });
         document.iniciar.submit;
     }
 }
@@ -89,7 +121,11 @@ function modificarcuenta() {
     var email = document.modcuenta.email.value;
     var nombre = document.modcuenta.nombre.value;
     if (validarfecha(fecha) && validarnombre(nombre) && validarcorreo(email)) {
-        alert("has modificado tu cuenta")
+        Swal.fire({
+            icon: 'success',
+            title: 'Perfecto',
+            text: 'has modificado tu cuenta'
+        });
         document.modcuenta.submit;
     }
 }
@@ -99,9 +135,17 @@ function modificarContra() {
     var pass = document.modcontra.pass.value;
     var confpas = document.modcontra.confpass.value;
     if (pass != confpas) {
-        alert("No coinciden las nuevas contraseñas");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No coinciden las nuevas contraseñas'
+        });
     } else if (validarcontrasena(pass) && validarcontrasena(antpass)) {
-        alert("Se ha modificado la contraseña correctamente");
+        Swal.fire({
+            icon: 'success',
+            title: 'Perfecto',
+            text: 'Se ha modificado la contraseña correctamente'
+        });
         document.modcontra.submit;
     }
 }
@@ -109,21 +153,33 @@ function modificarContra() {
 function HPregunta() {
     var pregunta = document.getElementById("pregunta").value;
     if (validarPregunta(pregunta)) {
-        alert("se ha realizado la pregunta con exito");
+        Swal.fire({
+            icon: 'success',
+            title: 'Excelente',
+            text: 'Se ha realizado la pregunta con exito'
+        });
     }
 }
 
 function MPregunta() {
     var pregunta = document.getElementById("Mpregunta").value;
     if (validarPregunta(pregunta)) {
-        alert("se ha realizado la pregunta con exito");
+        Swal.fire({
+            icon: 'success',
+            title: 'Excelente',
+            text: 'Se ha realizado la pregunta con exito'
+        });
     }
 }
 
 function RechaPregunta() {
     var razon = document.rechapre.razon.value;
     if (validarPregunta(razon)) {
-        alert("se ha rechazado la pregunta con exito");
+        Swal.fire({
+            icon: 'success',
+            title: 'Correcto',
+            text: 'Se ha rechazado la pregunta con exito'
+        });
         document.rechapre.submit;
     }
 }
@@ -132,7 +188,11 @@ function ResPregunta() {
     var pregunta = document.repre.pre.value;
     var respuesta = document.repre.res.value;
     if (validarPregunta(pregunta) && validarPregunta(respuesta)) {
-        alert("Se ha respondido la respuesta con exito");
+        Swal.fire({
+            icon: 'success',
+            title: 'Correcto',
+            text: 'Se ha respondido la pregunta con exito'
+        });
         document.repre.submit;
     }
 }
