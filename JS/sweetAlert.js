@@ -18,7 +18,7 @@ function aceptar() {
 }
 
 function distribucion() {
-    location.href = '../distribución.html';
+    location.href = './distribución.html';
 }
 
 function enviarConfirmacion() {
