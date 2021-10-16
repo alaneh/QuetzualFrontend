@@ -8,6 +8,7 @@
     <title>Preguntar</title>
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/hacerPregunta.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -49,11 +50,11 @@
         </div>
         <div class="pregunta">
             <img src="./img/bxs-user.svg" alt="">
-            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta" disabled></textarea>
+            <textarea name="" id="pregunta" class="area" placeholder="Escribe aquí tu pregunta"></textarea>
         </div>
         <div class="flex">
-            <button class="question" data-open="modalR">Preguntar</button>
-            <button class="cs">Cancelar</button>
+            <button class="question" onclick="HPregunta()">Preguntar</button>
+            <button class="cs" onclick="cancelar()">Cancelar</button>
         </div>
     </div>
     <div class="modal" id="modalR">
@@ -79,7 +80,7 @@
                             sintomas: 1.- Dolor al tragar 2.- Diarrea 3.- Llagas en la ingle</h3>
                     </div>
                 </div>
-                <button class="question">Consultar respuesta</button>
+                <button class="question" onclick="consultarPregunta()">Consultar respuesta</button>
             </div>
             <p>¿Aún deseas hacer esta pregunta?</p><br>
             <button class="question" onclick="enviarConfirmacion()">Continuar</button>

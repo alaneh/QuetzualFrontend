@@ -164,22 +164,14 @@ function modificarContra() {
 function HPregunta() {
     var pregunta = document.getElementById("pregunta").value;
     if (validarPregunta(pregunta)) {
-        Swal.fire({
-            icon: 'success',
-            title: 'Excelente',
-            text: 'Se ha realizado la pregunta con exito'
-        });
+        document.getElementById('modalR').classList.add(isVisible);
     }
 }
 
 function MPregunta() {
     var pregunta = document.getElementById("Mpregunta").value;
     if (validarPregunta(pregunta)) {
-        Swal.fire({
-            icon: 'success',
-            title: 'Excelente',
-            text: 'Se ha realizado la pregunta con exito'
-        });
+        document.getElementById('modalG').classList.add(isVisible);
     }
 }
 

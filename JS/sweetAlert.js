@@ -46,3 +46,11 @@ function enviarModificarPregunta() {
 function cerrarSesion() {
     location.href = './index.html';
 }
+
+function consultarPregunta() {
+    location.href = './sesionUsuario.html';
+}
+
+function cancelar() {
+    window.history.back();
+}

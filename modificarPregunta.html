@@ -8,6 +8,7 @@
     <title>Preguntar</title>
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/modificarPregunta.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -45,11 +46,11 @@
         </div>
         <div class="pregunta">
             <img src="./img/bxs-user.svg" alt="">
-            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium modi, minima deserunt sit sequi aspernatur.</textarea>
+            <textarea name="" id="Mpregunta" class="area" placeholder="Escribe aquí tu pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium modi, minima deserunt sit sequi aspernatur.</textarea>
         </div>
         <div class="flex">
             <button class="cs" data-open="modalR">Eliminar pregunta</button>
-            <button class="question" data-open="modalG">Guardar cambios</button>
+            <button class="question" onclick="MPregunta()">Guardar cambios</button>
         </div>
     </div>
     <div class="modal" id="modalR">
