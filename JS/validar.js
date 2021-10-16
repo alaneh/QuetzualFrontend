@@ -122,23 +122,26 @@ function iniciars() {
 }
 
 function modificarcuenta() {
-    var fecha = document.modcuenta.fecha.value;
-    var email = document.modcuenta.email.value;
-    var nombre = document.modcuenta.nombre.value;
+    var fecha = document.getElementById('fecha').value;
+    var email = document.getElementById('correo').value;
+    var nombre = document.getElementById('nombre').value;
     if (validarfecha(fecha) && validarnombre(nombre) && validarcorreo(email)) {
         Swal.fire({
             icon: 'success',
             title: 'Perfecto',
             text: 'has modificado tu cuenta'
         });
-        document.modcuenta.submit;
+        //document.modcuenta.submit;
+        setTimeout(function() {
+            location.reload();
+        }, 2000);
     }
 }
 
 function modificarContra() {
-    var antpass = document.modcontra.antpass.value;
-    var pass = document.modcontra.pass.value;
-    var confpas = document.modcontra.confpass.value;
+    var antpass = document.getElementById('antpass').value;
+    var pass = document.getElementById('password').value;
+    var confpas = document.getElementById('confpass').value;
     if (pass != confpas) {
         Swal.fire({
             icon: 'error',
@@ -151,7 +154,10 @@ function modificarContra() {
             title: 'Perfecto',
             text: 'Se ha modificado la contraseña correctamente'
         });
-        document.modcontra.submit;
+        //document.modcontra.submit;
+        setTimeout(function() {
+            location.reload();
+        }, 2000);
     }
 }
 

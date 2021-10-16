@@ -3,6 +3,17 @@ function aceptar() {
     registrarr();
 }
 
+function modC() {
+    document.getElementById('modificar').submit;
+    modificarcuenta();
+}
+
+function modP() {
+    document.getElementById('modPassword').submit;
+    modificarContra();
+}
+
+
 function validarIS() {
     document.getElementById('IniciarSesion').submit;
     var correo = document.getElementById('IScorreo').value;
@@ -16,7 +27,7 @@ function validarIS() {
         setTimeout(function() {
             distribucion();
             //location.href=´direccion de la otra página´
-        }, 1000);
+        }, 2000);
     }
 }
 

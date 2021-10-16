@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/cuenta.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -59,28 +60,28 @@
     <div class="flex">
         <div class="card">
             <form action="#">
-                <input type="text" placeholder="Nombre de Usuario" class="input">
-                <input type="text" placeholder="Correo electronico" class="input">
+                <input type="text" id="nombre" placeholder="Nombre de Usuario" class="input">
+                <input type="email" id="correo" placeholder="Correo electronico" class="input">
                 <br>
                 <label for="" class="article">Fecha de nacimiento</label><br>
-                <input type="date" name="" id="" class="input">
+                <input type="date" name="" id="fecha" class="input">
                 <br>
                 <label for="" class="article">Sexo</label>
                 <br>
-                <select name="" id="" class="select">
-                <option value="a">Masculino</option>
-                <option value="a">Femenino</option>
-                <option value="a">Prefiero no decirlo</option>
+                <select name="" id="sexo" class="select">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="NA">Prefiero no decirlo</option>
             </select>
-                <input type="submit" class="submit" value="Modificar Cuenta">
+                <button type="button" id="modificar" class="submit" onclick="modC()">Modificar Cuenta</button>
             </form>
         </div>
         <div class="card">
             <form action="#">
-                <input type="password" name="" id="" placeholder="Contraseña Actual" class="input">
-                <input type="password" name="" id="" placeholder="Nueva Contraseña" class="input">
-                <input type="password" name="" id="" placeholder="Confirmar Nueva Contraseña" class="input">
-                <input type="submit" class="submit" value="Cambiar contraseña">
+                <input type="password" name="" id="antpass" placeholder="Contraseña Actual" class="input">
+                <input type="password" name="" id="password" placeholder="Nueva Contraseña" class="input">
+                <input type="password" name="" id="confpass" placeholder="Confirmar Nueva Contraseña" class="input">
+                <button type="button" id="modPassword" class="submit" onclick="modP()">Cambiar contraseña</button>
             </form>
         </div>
     </div>
