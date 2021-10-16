@@ -1,18 +1,6 @@
 function aceptar() {
     document.getElementById('enviar').submit;
-    var correo = document.getElementById('correo').value;
-    var contra = document.getElementById('contrasena').value;
-    if (validarcorreo(correo) && validarcontrasena(contra)) {
-        Swal.fire(
-            '¡Excelente!',
-            '¡El registro ha sido existoso!',
-            'success'
-        )
-        setTimeout(function() {
-            location.reload();
-            //location.href=´direccion de la otra página´
-        }, 1000);
-    }
+    registrarr();
 }
 
 function validarIS() {

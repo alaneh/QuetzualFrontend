@@ -2,6 +2,7 @@ let expresioncorreo = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|
 let expresiontextnumber = /^[a-zA-Z0-9 ]+$/;
 let expresioncontra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
+let expresiononlytext = /^[a-zA-Z\s]*$/;
 
 function validarcorreo(correo) {
     var validar = expresioncorreo.test(correo);
@@ -20,8 +21,8 @@ function validarcontrasena(contrasena) {
     if (!validar) {
         Swal.fire({
             icon: 'error',
-            title: 'Oops...',
-            text: 'Ingrese un correo validoingresen una contraseña valida La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+            title: 'Ingrese una contraseña valida',
+            text: 'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
         });
     }
     return validar;
@@ -82,11 +83,11 @@ function validarPregunta(pregunta) {
 }
 
 function registrarr() {
-    var fecha = document.registrar.fecha.value;
-    var email = document.registrar.email.value;
-    var nombre = document.registrar.nombre.value;
-    var pass = document.registrar.pass.value;
-    var confpas = document.registrar.confpass.value;
+    var fecha = document.getElementById('fecha').value;
+    var email = document.getElementById('correo').value;
+    var nombre = document.getElementById('nombre').value;
+    var pass = document.getElementById('password').value;
+    var confpas = document.getElementById('confpass').value;
     if (pass != confpas) {
         Swal.fire({
             icon: 'error',
@@ -99,7 +100,11 @@ function registrarr() {
             title: 'Felicidades',
             text: 'Has registrado una cuenta'
         });
-        document.registrar.submit;
+
+        //document.registrar.submit;
+        setTimeout(function() {
+            location.reload();
+        }, 1000);
     }
 }
 
