@@ -8,6 +8,7 @@
     <title>Responder</title>
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/responderPregunta.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -41,16 +42,16 @@
             <h1>Pregunta</h1>
         </div>
         <div class="pregunta">
-            <textarea name="" id="" class="area" placeholder="Escribe aquí tu pregunta" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae laboriosam id ducimus vitae aperiam odio accusamus? Molestiae, dignissimos voluptates?</textarea>
+            <textarea name="" id="pregunta" class="area" placeholder="Escribe aquí tu pregunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae laboriosam id ducimus vita?</textarea>
         </div>
         <div class="pregunta2">
             <h1>¿Cuál es el motivo del rechazo?</h1>
         </div>
         <div class="pregunta">
-            <textarea name="" id="" class="area" placeholder="Escribe aquí tu respuesta"></textarea>
+            <textarea name="" id="razon" class="area" placeholder="Escribe aquí tu motivo de rechazo"></textarea>
         </div>
         <div class="flex">
-            <button class="question" data-open="modalR">Confirmar</button>
+            <button id="rechazar" class="question" onclick="RechaPregunta()">Confirmar</button>
             <button class="cs">Cancelar</button>
         </div>
     </div>
@@ -64,6 +65,7 @@
     </div>
     <script src="./JS/redirigir.js"></script>
     <script src="./JS/funcionModal.js"></script>
+    <script src="./JS/validar.js"></script>
 </body>
 
 </html>
