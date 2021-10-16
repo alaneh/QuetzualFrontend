@@ -8,6 +8,7 @@
     <title>Administrador</title>
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/adminDoctores.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -51,12 +52,12 @@
     </div>
     <div class="modal2" id="modal2">
         <div class="card">
-            <form action="./index.html">
-                <input type="text" placeholder="Nombre de Usuario" class="input">
-                <input type="email" placeholder="Correo electronico" class="input">
+            <form action="">
+                <input type="text" name="name" id="name" placeholder="Nombre de Usuario" class="input">
+                <input type="email" name="email" id="email" placeholder="Correo electronico" class="input">
                 <br>
                 <label for="" class="article">Fecha de nacimiento</label><br>
-                <input type="date" name="" id="" class="input">
+                <input type="date" name="date" id="date" class="input">
                 <br>
                 <label for="" class="article">Sexo</label>
                 <br>
@@ -65,9 +66,9 @@
                 <option value="a">Femenino</option>
                 <option value="a">Prefiero no decirlo</option>
             </select>
-                <input type="password" name="" id="" placeholder="Contraseña" class="input">
-                <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
-                <input type="submit" class="submit" value="Registrar Doctor">
+                <input type="password" name="password1" id="password1" placeholder="Contraseña" class="input">
+                <input type="password" name="passwordConfirm1" id="passwordConfirm1" placeholder="Confirmar Contraseña" class="input">
+                <button type="button" class="submit" onclick="registrardr()">Registrar Doctor</button>
             </form>
         </div>
     </div>
@@ -80,28 +81,29 @@
     </div>
     <div class="modal2" id="modal4">
         <div class="card">
-            <form action="./index.html">
-                <input type="text" placeholder="Nombre de Usuario" class="input" value="López Castillo Azurim Sua">
-                <input type="email" placeholder="Correo electronico" class="input" value="correodeprueba@gmail.com">
+            <form action="">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre de Usuario" class="input" value="López Castillo Azurim Sua">
+                <input type="email" name="correo" id="correo" placeholder="Correo electronico" class="input" value="correodeprueba@gmail.com">
                 <br>
                 <label for="" class="article">Fecha de nacimiento</label><br>
-                <input type="date" name="" id="" class="input" value="2004-01-09">
+                <input type="date" name="fn" id="fn" class="input" value="2004-01-09">
                 <br>
                 <label for="" class="article">Sexo</label>
                 <br>
-                <select name="" id="" class="select">
+                <select name="sexo" id="sexo" class="select">
                     <option value="a">Masculino</option>
                     <option value="a" selected>Femenino</option>
                     <option value="a">Prefiero no decirlo</option>
                 </select>
-                <input type="password" name="" id="" placeholder="Contraseña" class="input">
-                <input type="password" name="" id="" placeholder="Confirmar Contraseña" class="input">
-                <input type="submit" class="submit" value="Modificar doctor">
+                <input type="password" name="password" id="password" placeholder="Contraseña" class="input">
+                <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirmar Contraseña" class="input">
+                <button type="button" id="modificar" class="submit" onclick="modificarcuentadr()">Modificar doctor</button>
             </form>
         </div>
     </div>
     <script src="./JS/redirigir.js"></script>
     <script src="./JS/funcionModal2.js"></script>
+    <script src="./JS/validar.js"></script>
 </body>
 
 </html>

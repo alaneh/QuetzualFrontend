@@ -2,19 +2,29 @@ let expresioncorreo = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|
 let expresiontextnumber = /^[a-zA-Z0-9 ]+$/;
 let expresioncontra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
+let expresiononlytext = /^[a-zA-Z\s]*$/;
+
 
 function validarcorreo(correo) {
     var validar = expresioncorreo.test(correo);
     if (!validar) {
-        alert("ingresen un correo valido")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese un correo valido'
+        });
     }
-    return validar
+    return validar;
 }
 
 function validarcontrasena(contrasena) {
     var validar = expresioncontra.test(contrasena);
     if (!validar) {
-        alert("ingresen una contraseña valida La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula. ")
+        Swal.fire({
+            icon: 'error',
+            title: 'Ingrese una contraseña valida',
+            text: 'La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+        });
     }
     return validar;
 }
@@ -22,12 +32,20 @@ function validarcontrasena(contrasena) {
 function validarnombre(nombre) {
     var validar = expresiononlytext.test(nombre);
     if (!validar) {
-        alert("ingresen un nombre valido valida (solo letras)")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese un nombre valido (solo letras)'
+        });
         return false;
-    } else if (nombre.length > 20 || nombre.length == 0) {
-        alert("El tamaño del nombre no es correcto")
+    } else if (nombre.length > 30 || nombre.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El tamaño del nombre no es correcto',
+            text: 'El nombre tiene que medir entre 1 y 20 caracteres'
+        });
         return false;
-    } else {
+    }else {
         return true;
     }
 }
@@ -35,96 +53,96 @@ function validarnombre(nombre) {
 function validarfecha(fecha) {
     var validar = expresionfecha.test(fecha);
     if (!validar) {
-        alert("ingresen una fecha valida")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingrese una fecha valida'
+        });
     }
     return validar;
 }
 
-function validarPregunta(pregunta) {
-    var validar = expresiontextnumber.test(pregunta);
-    if (!validar) {
-        alert("solo puedes ingresar letras y numeros en el campo");
-        return false;
-    } else if (pregunta.length > 100 || pregunta.length == 0) {
-        alert("solo puedes ingresar como maximos 100 caracteres");
-        return false;
-    } else {
-        return true;
+function registrardr() {
+    var fecha = document.getElementById("date").value;
+    var email = document.getElementById("email").value;
+    var nombre = document.getElementById("name").value;
+    var pass = document.getElementById("password1").value;
+    var confpass = document.getElementById("passwordConfirm1").value;
+    if (validarnombre(nombre) && validarfecha(fecha) && validarcorreo(email) && validarcontrasena(pass) && (pass = confpass)) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Felicidades',
+            text: 'Has registrado una cuenta'
+        });
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+    } else if (pass != confpass) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Las contraseñas no coinciden'
+            });
+    } 
+        //document.registrar.submit;
+        
     }
-}
 
-function registrarr() {
-    var fecha = document.registrar.fecha.value;
-    var email = document.registrar.email.value;
-    var nombre = document.registrar.nombre.value;
-    var pass = document.registrar.pass.value;
-    var confpas = document.registrar.confpass.value;
-    if (pass != confpas) {
-        alert("Las contraseñas no coinciden");
-    } else if (validarfecha(fecha) && validarnombre(nombre) && validarcorreo(email) && validarcontrasena(pass)) {
-        alert("has registrado una cuenta")
-        document.registrar.submit;
+function modificarcuentadr() {
+    var fecha = document.getElementById("fn").value;
+    var email = document.getElementById("correo").value;
+    var nombre = document.getElementById("nombre").value;
+    var pass = document.getElementById("password").value;
+    var confpass = document.getElementById("passwordConfirm").value;
+    if (validarnombre(nombre) && validarfecha(fecha) && validarcorreo(email) && validarcontrasena(pass) && (pass = confpass)) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Felicidades',
+            text: 'Has modificado una cuenta'
+        });
+        //document.registrar.submit;
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+    } else if (pass != confpass) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Las contraseñas no coinciden'
+            });
+        } 
     }
-}
 
-function iniciars() {
-    var email = document.iniciar.email.value;
-    var pass = document.iniciar.pass.value;
-    if (validarcorreo(email) && validarcontrasena(pass)) {
-        alert("Se ha iniciado Sesión")
-        document.iniciar.submit;
+function modificarcuentaAdmin() {
+    var fecha = document.getElementById("fechaAdmin").value;
+    var email = document.getElementById("correoadmin").value;
+    var nombre = document.getElementById("nombreadmin").value;
+    if (validarnombre(nombre) && validarfecha(fecha) && validarcorreo(email)) {
+        document.getElementById("modalR").classList.add(isVisible);
     }
-}
+        //document.registrar.submit;
 
-function modificarcuenta() {
-    var fecha = document.modcuenta.fecha.value;
-    var email = document.modcuenta.email.value;
-    var nombre = document.modcuenta.nombre.value;
-    if (validarfecha(fecha) && validarnombre(nombre) && validarcorreo(email)) {
-        alert("has modificado tu cuenta")
-        document.modcuenta.submit;
     }
-}
 
 function modificarContra() {
-    var antpass = document.modcontra.antpass.value;
-    var pass = document.modcontra.pass.value;
-    var confpas = document.modcontra.confpass.value;
-    if (pass != confpas) {
-        alert("No coinciden las nuevas contraseñas");
-    } else if (validarcontrasena(pass) && validarcontrasena(antpass)) {
-        alert("Se ha modificado la contraseña correctamente");
-        document.modcontra.submit;
-    }
-}
-
-function HPregunta() {
-    var pregunta = document.getElementById("pregunta").value;
-    if (validarPregunta(pregunta)) {
-        alert("se ha realizado la pregunta con exito");
-    }
-}
-
-function MPregunta() {
-    var pregunta = document.getElementById("Mpregunta").value;
-    if (validarPregunta(pregunta)) {
-        alert("se ha realizado la pregunta con exito");
-    }
-}
-
-function RechaPregunta() {
-    var razon = document.rechapre.razon.value;
-    if (validarPregunta(razon)) {
-        alert("se ha rechazado la pregunta con exito");
-        document.rechapre.submit;
-    }
-}
-
-function ResPregunta() {
-    var pregunta = document.repre.pre.value;
-    var respuesta = document.repre.res.value;
-    if (validarPregunta(pregunta) && validarPregunta(respuesta)) {
-        alert("Se ha respondido la respuesta con exito");
-        document.repre.submit;
-    }
+    var antpass = document.getElementById("passwordact").value;
+    var pass = document.getElementById("newpassword").value;
+    var confpass = document.getElementById("newpasswordconfirm").value;
+    if (validarcontrasena(pass) && validarcontrasena(antpass) && (pass = confpass)) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Perfecto',
+            text: 'Se ha modificado la contraseña correctamente'
+        });
+        //document.modcontra.submit;
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+    }else if (pass != confpass) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No coinciden las nuevas contraseñas'
+        });
+    } 
 }
