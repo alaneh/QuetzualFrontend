@@ -1,8 +1,8 @@
 let expresioncorreo = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-let expresiontextnumber = /^[a-zA-Z0-9 ]+$/;
+let expresiontextnumber = /^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ?¿.]+$/;
 let expresioncontra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
-let expresiononlytext = /^[a-zA-Z\s]*$/;
+let expresiononlytext = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+$/u;
 
 function validarcorreo(correo) {
     var validar = expresioncorreo.test(correo);
@@ -63,18 +63,18 @@ function validarfecha(fecha) {
 
 function validarPregunta(pregunta) {
     var validar = expresiontextnumber.test(pregunta);
-    if (!validar) {
+    if (pregunta.length > 100 || pregunta.length < 10) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Solo puedes ingresar como maximo 100 caracteres y minimo 10 caracteres'
+        });
+        return false;
+    } else if (!validar) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Solo puedes ingresar letras y numeros en el campo'
-        });
-        return false;
-    } else if (pregunta.length > 100 || pregunta.length == 0) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Solo puedes ingresar como maximo 100 caracteres'
         });
         return false;
     } else {
