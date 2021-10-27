@@ -304,3 +304,7 @@ a {
 a:hover {
     border-bottom: 5px solid #1C6EA4;
 }
+
+button {
+    cursor: pointer;
+}

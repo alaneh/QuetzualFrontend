@@ -289,3 +289,7 @@ a:hover {
     display: inline;
     color: yellow;
 }
+
+button {
+    cursor: pointer;
+}
