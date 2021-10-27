@@ -258,7 +258,7 @@ select {
     max-width: 90%;
 }
 
-a {
+.menu>a {
     display: flex;
     text-decoration: none;
     color: black;
@@ -269,6 +269,20 @@ a {
     transition: all .15s linear;
 }
 
-a:hover {
+.menu>a:hover {
     border-bottom: 5px solid #1C6EA4;
+}
+
+.enlace {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.enlace:hover {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }

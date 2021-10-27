@@ -28,3 +28,7 @@ $('.Estrellas').starRating({
         document.getElementById('modalR').classList.add(isVisible);
     }
 });
+
+function crm() {
+    document.getElementById('modalR').classList.remove(isVisible);
+}

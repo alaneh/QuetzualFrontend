@@ -53,8 +53,9 @@
             <textarea name="" id="pregunta" class="area" placeholder="Escribe aquí tu pregunta"></textarea>
         </div>
         <div class="flex">
+            <!--<button class="question" onclick="HPregunta()">Preguntar</button>-->
             <button class="question" onclick="HPregunta()">Preguntar</button>
-            <button class="cs" onclick="cancelar()">Cancelar</button>
+            <button class="cs" onclick="javascript:location.href ='./sesionUsuario.html'">Cancelar</button>
         </div>
     </div>
     <div class="modal" id="modalR">
@@ -64,14 +65,8 @@
                 <div class="mini_header">
                     <h2>Edad</h2>
                     <h2>Categoria</h2>
-                    <h2>4.7
-                        <p class="star">★</p>
-                    </h2>
-                    <h2>150 Reseñas</h2>
-                </div>
-                <div class="sub_header">
-                    <h2>22/09/2021 - Respondido: 23/09/2021</h2>
-                    <h2>Dr. Juan Manuel Mendoza</h2>
+
+                    <h2>3 respuestas</h2>
                 </div>
                 <div class="pregunta">
                     <img src="./img/bxs-user.svg" alt="">
@@ -80,12 +75,13 @@
                             sintomas: 1.- Dolor al tragar 2.- Diarrea 3.- Llagas en la ingle</h3>
                     </div>
                 </div>
-                <button class="question" onclick="consultarPregunta()">Consultar respuesta</button>
+                <button class="question" onclick="consultarPregunta()">Consultar respuestas</button>
             </div>
             <p>¿Aún deseas hacer esta pregunta?</p><br>
             <button class="question" onclick="enviarConfirmacion()">Continuar</button>
         </div>
     </div>
+    <script src="./JS/algoritmoDeDestruccionGatuna.js"></script>
     <script src="./JS/validar.js"></script>
     <script src="./JS/sweetAlert.js"></script>
     <script src="./JS/funcionModal.js"></script>

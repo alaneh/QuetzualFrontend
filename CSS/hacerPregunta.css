@@ -42,7 +42,8 @@ header {
     margin: 10px;
     border: 1px solid #E96161;
     font-size: 1.35rem;
-    transition: all .15s linear
+    transition: all .15s linear;
+    cursor: pointer;
 }
 
 .cs:hover {

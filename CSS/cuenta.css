@@ -158,6 +158,7 @@ button {
     text-align: center;
     cursor: default;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -184,6 +185,10 @@ button {
     background-color: white;
     border: 1px solid #BCBCBC;
     border-radius: 5px;
+}
+
+select:hover {
+    cursor: pointer;
 }
 
 .title {

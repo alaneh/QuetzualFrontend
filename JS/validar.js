@@ -164,7 +164,11 @@ function modificarContra() {
 function HPregunta() {
     var pregunta = document.getElementById("pregunta").value;
     if (validarPregunta(pregunta)) {
-        document.getElementById('modalR').classList.add(isVisible);
+        if (callm()) {
+            document.getElementById('modalR').classList.add(isVisible);
+        } else {
+            enviarConfirmacion();
+        }
     }
 }
 

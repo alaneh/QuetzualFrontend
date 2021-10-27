@@ -48,6 +48,7 @@ header {
 .cs:hover {
     background-color: #e98888;
     border: 1px solid #e98888;
+    cursor: pointer;
 }
 
 .menu {
@@ -115,6 +116,10 @@ select {
     padding: 10px;
 }
 
+select:hover {
+    cursor: pointer;
+}
+
 .contenedor {
     margin: 0 auto;
     width: 90%;
@@ -145,6 +150,8 @@ select {
     margin: 30px 20px;
     text-align: justify;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .preguntas {
@@ -152,13 +159,12 @@ select {
     max-width: 600px;
     background-color: #E3E3E3;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.602);
-    text-align: justify;
 }
 
 .respuesta {
     margin: 30px 20px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     text-align: center;
     flex-wrap: wrap-reverse;
 }
@@ -248,10 +254,6 @@ p {
 }
 
 @media (max-width: 500px) {
-    .pregunta {
-        align-items: center;
-        justify-content: center;
-    }
     .respuesta {
         align-items: center;
         justify-content: center;
@@ -278,5 +280,22 @@ a {
 }
 
 a:hover {
+    cursor: pointer;
     border-bottom: 5px solid #1C6EA4;
+}
+
+.respuesta>a {
+    margin: 10px;
+    padding: 10px;
+    background-color: #63E29C;
+    border-radius: 5px;
+}
+
+.respuesta>a:hover {
+    border-bottom: 5px solid rgba(155, 55, 55, 0);
+    background-color: #85ffbc;
+}
+
+.cubitoVerde {
+    cursor: pointer;
 }

@@ -48,7 +48,7 @@ function cerrarSesion() {
 }
 
 function consultarPregunta() {
-    location.href = './sesionUsuario.html';
+    location.href = './respuestasPregunta.html';
 }
 
 function cancelar() {

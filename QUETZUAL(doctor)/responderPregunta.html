@@ -30,10 +30,13 @@
             </a>
         </div>
     </header>
-    <div class="title" onclick="enviarGestionarPreguntas()">
-        <img src="./img/bxs-left-arrow-circle.svg">
-        <h1>Volver a gestionar preguntas</h1>
-    </div>
+    <a href="./preguntasPendientes.html" class="enlace">
+        <div class="title" onclick="enviarGestionarPreguntas()">
+            <img src="./img/bxs-left-arrow-circle.svg">
+            <h1>Volver a gestionar preguntas</h1>
+        </div>
+    </a>
+
     <div class="main_container">
         <div class="mini_header2">
             <h2>11/10/2021</h2>
@@ -60,7 +63,7 @@
         </div>
         <div class="flex">
             <button id="responder" class="question" onclick="ResPregunta()">Responder</button>
-            <button class="cs">Cancelar</button>
+            <a href="./preguntasPendientes.html" class="enlace"><button class="cs">Cancelar</button></a>
         </div>
     </div>
     <div class="modal" id="modalR">
