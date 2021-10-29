@@ -273,16 +273,6 @@ select {
     border-bottom: 5px solid #1C6EA4;
 }
 
-.enlace {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-
-.enlace:hover {
-    cursor: pointer;
-}
-
 button {
     cursor: pointer;
 }

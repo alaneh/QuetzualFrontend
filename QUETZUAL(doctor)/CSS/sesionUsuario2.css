@@ -48,6 +48,7 @@ header {
 .cs:hover {
     background-color: #e98888;
     border: 1px solid #e98888;
+    cursor: pointer;
 }
 
 .menu {
@@ -57,18 +58,6 @@ header {
     align-items: center;
     padding: 15px 20px;
     margin-bottom: 10px;
-}
-
-.menu_content {
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 2rem;
-    border-bottom: 5px solid #ffffff00;
-    transition: all .15s linear;
-}
-
-.menu_content:hover {
-    border-bottom: 5px solid #1C6EA4;
 }
 
 article {
@@ -127,6 +116,10 @@ select {
     padding: 10px;
 }
 
+select:hover {
+    cursor: pointer;
+}
+
 .contenedor {
     margin: 0 auto;
     width: 90%;
@@ -154,9 +147,10 @@ select {
 
 .pregunta {
     display: flex;
-    margin: 30px auto;
+    margin: 30px 20px;
     text-align: justify;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
 }
 
@@ -165,23 +159,6 @@ select {
     max-width: 600px;
     background-color: #E3E3E3;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.602);
-    text-align: justify;
-}
-
-.pregunta2 {
-    display: flex;
-    margin: 30px 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.preguntas2 {
-    width: 90%;
-    max-width: 800px;
-    background-color: #ffffff;
-    border: 1px solid black;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.602);
-    margin: 20px;
 }
 
 .respuesta {
@@ -193,7 +170,6 @@ select {
 }
 
 .respuestas {
-    margin: 30px 20px;
     width: 90%;
     max-width: 600px;
     background-color: #E3E3E3;
@@ -209,14 +185,6 @@ select {
     justify-content: space-between;
 }
 
-.mini_header2 {
-    background-color: #AC2727;
-    text-align: center;
-    padding: 5px 0;
-    color: white;
-    border-radius: 5px 5px 0 0;
-}
-
 .sub_header {
     background-color: #E3E3E3;
     display: flex;
@@ -225,15 +193,13 @@ select {
     justify-content: space-between;
 }
 
-.h1 {
-    display: inline;
-    text-align: center;
-    margin: 10px;
-}
-
 h2,
 h3 {
     padding: 5px 10px;
+}
+
+p {
+    text-align: left;
 }
 
 .star {
@@ -250,12 +216,12 @@ h3 {
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 2px 8px #0000008a;
+    padding: 1%;
     width: 95%;
-    max-width: 1000px;
+    max-width: 600px;
     margin: 30px auto;
     text-align: center;
     cursor: default;
-    border: 1px solid black;
 }
 
 .modal {
@@ -288,10 +254,6 @@ h3 {
 }
 
 @media (max-width: 500px) {
-    .pregunta {
-        align-items: center;
-        justify-content: center;
-    }
     .respuesta {
         align-items: center;
         justify-content: center;
@@ -306,7 +268,7 @@ h3 {
     }
 }
 
-.menu>a {
+a {
     display: flex;
     text-decoration: none;
     color: black;
@@ -314,30 +276,26 @@ h3 {
     margin-left: 5%;
     font-size: 2rem;
     border-bottom: 5px solid #ffffff00;
-    background-color: #63e29c00;
-    padding: 0px;
-    border-radius: 0px;
     transition: all .15s linear;
-}
-
-.menu>a:hover {
-    border-bottom: 5px solid #1C6EA4;
-}
-
-a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    background-color: #63E29C;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 a:hover {
     cursor: pointer;
+    border-bottom: 5px solid #1C6EA4;
 }
 
-button {
+.respuesta>a {
+    margin: 10px;
+    padding: 10px;
+    background-color: #63E29C;
+    border-radius: 5px;
+}
+
+.respuesta>a:hover {
+    border-bottom: 5px solid rgba(155, 55, 55, 0);
+    background-color: #85ffbc;
+}
+
+.cubitoVerde {
     cursor: pointer;
 }

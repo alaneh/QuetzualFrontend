@@ -13,3 +13,22 @@ document.addEventListener("click", e => {
         document.querySelector(".modal.is-visible").classList.remove(isVisible);
     }
 });
+
+$('.Estrellas').starRating({
+    disableAfterRate: true,
+    useFullStars: true,
+    totalStars: 5,
+    emptyColor: 'lightgray',
+    hoverColor: 'yellow',
+    initialRating: 0,
+    strokeWidth: 0,
+    useGradient: false,
+    minRating: 1,
+    callback: function(currentRating) {
+        document.getElementById('modalR').classList.add(isVisible);
+    }
+});
+
+function crm() {
+    document.getElementById('modalR').classList.remove(isVisible);
+}
