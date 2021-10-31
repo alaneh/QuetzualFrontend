@@ -1,8 +1,9 @@
 let expresioncorreo = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-let expresiontextnumber = /^[a-zA-Z0-9 ]+$/;
+let expresiontextnumber = /^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ?¿,.]+$/;
 let expresioncontra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
-let expresiononlytext = /^[a-zA-Z\s]*$/;
+let expresiononlytext = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+$/u;
+
 
 
 function validarcorreo(correo) {
@@ -45,7 +46,7 @@ function validarnombre(nombre) {
             text: 'El nombre tiene que medir entre 1 y 20 caracteres'
         });
         return false;
-    }else {
+    } else {
         return true;
     }
 }
@@ -78,15 +79,15 @@ function registrardr() {
             location.reload();
         }, 5000);
     } else if (pass != confpass) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Las contraseñas no coinciden'
-            });
-    } 
-        //document.registrar.submit;
-        
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Las contraseñas no coinciden'
+        });
     }
+    //document.registrar.submit;
+
+}
 
 function modificarcuentadr() {
     var fecha = document.getElementById("fn").value;
@@ -105,13 +106,13 @@ function modificarcuentadr() {
             location.reload();
         }, 5000);
     } else if (pass != confpass) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Las contraseñas no coinciden'
-            });
-        } 
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Las contraseñas no coinciden'
+        });
     }
+}
 
 function modificarcuentaAdmin() {
     var fecha = document.getElementById("fechaAdmin").value;
@@ -120,9 +121,9 @@ function modificarcuentaAdmin() {
     if (validarnombre(nombre) && validarfecha(fecha) && validarcorreo(email)) {
         document.getElementById("modalR").classList.add(isVisible);
     }
-        //document.registrar.submit;
+    //document.registrar.submit;
 
-    }
+}
 
 function modificarContra() {
     var antpass = document.getElementById("passwordact").value;
@@ -138,11 +139,11 @@ function modificarContra() {
         setTimeout(function() {
             location.reload();
         }, 5000);
-    }else if (pass != confpass) {
+    } else if (pass != confpass) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'No coinciden las nuevas contraseñas'
         });
-    } 
+    }
 }

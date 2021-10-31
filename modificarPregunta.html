@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntar</title>
+    <title>Modificar Pregunta</title>
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/modificarPregunta.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -61,7 +61,7 @@
                 </b>
             </article>
             <button class="cs">Eliminar pregunta</button> <br>
-            <button class="question">No, quiero volver</button>
+            <button class="question" onclick="crm()">No, quiero volver</button>
         </div>
     </div>
     <div class="modal" id="modalG">
@@ -69,7 +69,7 @@
             <article>
                 <b>Su pregunta ha sido modificada con exito</b>
             </article>
-            <img src="./img/check-square-solid-240.png" alt="">
+            <img src="./img/check-square-solid-240.png" onclick="crm2()">
         </div>
     </div>
     <script src="./JS/validar.js"></script>

@@ -1,7 +1,8 @@
 let expresioncorreo = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-let expresiontextnumber = /^[a-zA-Z0-9 ]+$/;
+let expresiontextnumber = /^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ?¿,.]+$/;
 let expresioncontra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 let expresionfecha = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
+let expresiononlytext = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+$/u;
 
 function validarcorreo(correo) {
     var correo = document.getElementById("correo").value;
@@ -119,25 +120,25 @@ function RechaPregunta() {
     var pregunta = document.getElementById("pregunta").value;
     var razon = document.getElementById("razon").value;
     var allvalid = true;
-    if(pregunta.length == 0 || razon.length == 0){
+    if (pregunta.length == 0 || razon.length == 0) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡Todos los campos son obligatorios, no puedes rechazar la pregunta sin tener la pregunta ni escribir la razón del rechazo!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡Todos los campos son obligatorios, no puedes rechazar la pregunta sin tener la pregunta ni escribir la razón del rechazo!',
+            icon: 'error'
         });
         allvalid = false;
         return false;
     }
-    if(pregunta.length > 100 || razon.length > 100){
+    if (pregunta.length > 100 || razon.length > 100) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡Sólo puedes ingresar como máximo 100 caracteres por pregunta y razón de rechazo!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡Sólo puedes ingresar como máximo 100 caracteres por pregunta y razón de rechazo!',
+            icon: 'error'
         });
         allvalid = false;
         return false;
     }
-    if(!expresiontextnumber.test(pregunta) || !expresiontextnumber.test(razon)){
+    if (!expresiontextnumber.test(pregunta) || !expresiontextnumber.test(razon)) {
         Swal.fire({
             title: '¡Oops!',
             text: '¡Sólo puedes ingresar letras y números en la pregunta y en la razón de rechazo!',
@@ -146,14 +147,14 @@ function RechaPregunta() {
         allvalid = false;
         return false;
     }
-    if(!allvalid){
+    if (!allvalid) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡No se realizó correctamente el rechazar la pregunta!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡No se realizó correctamente el rechazar la pregunta!',
+            icon: 'error'
         });
         return false;
-    }else{
+    } else {
         document.getElementById('modalR').classList.add(isVisible);
         document.getElementById('rechazar').submit;
     }
@@ -163,25 +164,25 @@ function ResPregunta() {
     var pregunta = document.getElementById("pregunta").value;
     var respuesta = document.getElementById("respuesta").value;
     var allvalid = true;
-    if(pregunta.length == 0 || respuesta.length == 0){
+    if (pregunta.length == 0 || respuesta.length == 0) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡Todos los campos son obligatorios, no puedes responder la pregunta sin tener la pregunta ni escribir la respuesta!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡Todos los campos son obligatorios, no puedes responder la pregunta sin tener la pregunta ni escribir la respuesta!',
+            icon: 'error'
         });
         allvalid = false;
         return false;
     }
-    if(pregunta.length > 100 || respuesta.length > 100){
+    if (pregunta.length > 100 || respuesta.length > 100) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡Sólo puedes ingresar como máximo 100 caracteres por pregunta y respuesta!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡Sólo puedes ingresar como máximo 100 caracteres por pregunta y respuesta!',
+            icon: 'error'
         });
         allvalid = false;
         return false;
     }
-    if(!expresiontextnumber.test(pregunta) || !expresiontextnumber.test(respuesta)){
+    if (!expresiontextnumber.test(pregunta) || !expresiontextnumber.test(respuesta)) {
         Swal.fire({
             title: '¡Oops!',
             text: '¡Sólo puedes ingresar letras y números en la pregunta y en la respuesta!',
@@ -190,14 +191,14 @@ function ResPregunta() {
         allvalid = false;
         return false;
     }
-    if(!allvalid){
+    if (!allvalid) {
         Swal.fire({
-            title:'¡Oops!',
-            text:'¡No se realizó correctamente el responder la pregunta!',
-            icon:'error'
+            title: '¡Oops!',
+            text: '¡No se realizó correctamente el responder la pregunta!',
+            icon: 'error'
         });
         return false;
-    }else{
+    } else {
         document.getElementById('modalR').classList.add(isVisible);
         document.getElementById('responder').submit;
     }
