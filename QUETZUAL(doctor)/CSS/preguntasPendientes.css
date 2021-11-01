@@ -199,3 +199,17 @@ a {
 a:hover {
     border-bottom: 5px solid #1C6EA4;
 }
+
+.filtro {
+    text-align: end;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+}
+
+select:hover {
+    cursor: pointer;
+}
