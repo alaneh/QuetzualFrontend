@@ -100,11 +100,7 @@ function registrarr() {
             title: 'Felicidades',
             text: 'Has registrado una cuenta'
         });
-
-        //document.registrar.submit;
-        setTimeout(function() {
-            location.reload();
-        }, 1000);
+        document.enviar.submit();
     }
 }
 
